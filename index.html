@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="David Szczepanik"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Avionsalon - Cvičení JavaScript</title>
+</head>
+
+<body>
+<div class="web-wrap">
+  <header>
+    <h1 class="font-logo">
+      <span class="sm-hide"></span>Objednávkový formulář pro nákup letenek<span class="sm-hide"
+    ></span
+    >
+    </h1>
+  </header>
+  <main>
+    <form action="" class="flight-order-form">
+
+      <!--Město-->
+      <section class="destinations">
+        <div class="destination-selection">
+
+          <label for="cities">Město:</label>
+
+          <select name="cities" id="cities">
+            <option value="praha">Praha 500 Kč</option>
+            <option value="frankfurt">Frankfurt 3000 Kč</option>
+            <option value="new-york">New York 15000 Kč</option>
+            <option value="sydney">Sydney 30000 Kč</option>
+
+          </select>
+
+        </div>
+      </section>
+
+      <!--Počet letenek-->
+      <section class="flight-details">
+        <div class="details-wrap">
+          <div class="count-return-wrap">
+            <div class="count-wrap">
+              <label for="flight-count">Počet letenek:</label>
+              <select name="" id="flight-count">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+            <div class="flight-return-wrap">
+              <label for="return-chkbx">Zpáteční letenka:</label>
+              <input type="checkbox" name="" id="return-chkbx"/>
+            </div>
+          </div>
+
+          <!--Třída-->
+          <div class="flight-class-wrap">
+            Třída:
+            <div class="class-type">
+              <input
+                type="radio"
+                name="class-type-rad"
+                id="class-type-0"
+                class="class-type-rad"
+                checked
+              /><label for="class-type-0">Economy class</label>
+            </div>
+            <div class="class-type">
+              <input
+                type="radio"
+                name="class-type-rad"
+                id="class-type-1"
+                class="class-type-rad"
+              /><label for="class-type-1">Bussiness class</label>
+            </div>
+            <div class="class-type">
+              <input
+                type="radio"
+                name="class-type-rad"
+                class="class-type-rad"
+                id="class-type-2"
+              /><label for="class-type-2">Royal class</label>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div id="total-price">Celková cena letenek:</div>
+
+      <!--Počet letenek-->
+      <section class="summarize">
+        <div class="summarize-detail hidden">
+
+          <label for="price-offer">Vaše finanční prostředky:</label>
+          <div class="currency-wrap">
+            <input
+              type="number"
+              name=""
+              id="price-offer"
+              placeholder="0"
+            />
+          </div>
+          <input type="button" value="Vypočítat" id="calculate-btn"/>
+
+
+        </div>
+      </section>
+
+      <!--Poznámky-->
+      <section class="notes">
+        <h2>Poznámky</h2>
+        <textarea
+          name=""
+          id="notes-txt"
+          cols="40"
+          rows="10"
+          onkeypress="return validate(event)"
+          placeholder="Zde napište svou poznámku..."
+        ></textarea>
+      </section>
+
+      <input type="button" value="Odeslat" id="send-btn"/>
+
+    </form>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

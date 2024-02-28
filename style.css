@@ -1,0 +1,8 @@
+.flight-class-wrap {
+  display: flex;
+}
+
+.summarize-detail {
+  display: flex;
+  align-items: center;
+}
